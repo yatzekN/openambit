@@ -204,7 +204,7 @@ static int log_read(ambit_object_t *object, ambit_log_skip_cb skip_cb, ambit_log
     
     libambit_sbem0102_data_init(&send_data_object);
     libambit_sbem0102_data_init(&reply_data_object);
-    libambit_sbem0102_data_add(&send_data_object, 0x81, NULL, 0);
+    libambit_sbem0102_data_add(&send_data_object, 0x8d, NULL, 0);
     if (libambit_sbem0102_command_request(&object->driver_data->sbem0102, ambit_command_ambit3_log_headers, &send_data_object, &reply_data_object) != 0) {
         LOG_WARNING("Failed to read log headers");
         return -1;
