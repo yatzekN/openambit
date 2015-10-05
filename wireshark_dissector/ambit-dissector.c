@@ -114,7 +114,7 @@ static int hf_ambit_personal_weight = -1;
 static int hf_ambit_personal_max_hb = -1;
 static int hf_ambit_personal_rest_hb = -1;
 static int hf_ambit_personal_birthyear = -1;
-static int hf_ambit_personal_length = -1;
+static int hf_ambit_personal_height = -1;
 static int hf_ambit_personal_sex = -1;
 static int hf_ambit_personal_fitness_level = -1;
 static int hf_ambit_personal_alti_baro_fused_alti = -1;
@@ -596,7 +596,7 @@ static gint dissect_ambit_personal_settings_reply(tvbuff_t *tvb, packet_info *pi
     guint8 sex = tvb_get_guint8(tvb, offset);
     proto_tree_add_string_format_value(tree, hf_ambit_personal_sex, tvb, offset, 1, "Is male", "%s", sex == 1 ? "true" : "false");
     offset += 1;
-    proto_tree_add_item(tree, hf_ambit_personal_length, tvb, offset, 1, ENC_LITTLE_ENDIAN);
+    proto_tree_add_item(tree, hf_ambit_personal_height, tvb, offset, 1, ENC_LITTLE_ENDIAN);
     offset += 1;
     proto_tree_add_item(tree, hf_ambit_personal_alti_baro_profile, tvb, offset, 1, ENC_LITTLE_ENDIAN);
     offset += 1;
@@ -2219,8 +2219,8 @@ proto_register_ambit(void)
           { "Rest heart rate", "ambit.personal.resthb", FT_UINT8, BASE_DEC, NULL, 0x0,NULL, HFILL } },
         { &hf_ambit_personal_birthyear,
           { "Birthyear", "ambit.personal.birthyear", FT_UINT16, BASE_DEC, NULL, 0x0, NULL, HFILL } },
-        { &hf_ambit_personal_length,
-          { "Length", "ambit.personal.length", FT_UINT8, BASE_DEC, NULL, 0x0,NULL, HFILL } },
+        { &hf_ambit_personal_height,
+          { "Height", "ambit.personal.height", FT_UINT8, BASE_DEC, NULL, 0x0,NULL, HFILL } },
         { &hf_ambit_personal_sex,
           { "IsMale", "ambit.personal.ismale", FT_STRING, BASE_NONE, NULL, 0x0,NULL, HFILL } },
         { &hf_ambit_personal_fitness_level,

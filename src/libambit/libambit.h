@@ -95,7 +95,7 @@ typedef struct ambit_personal_settings_s {
     uint8_t  rest_hr;
     uint8_t  fitness_level;
     uint8_t  is_male;
-    uint8_t  length;
+    uint8_t  height;
     uint8_t  alti_baro_mode;
     uint8_t  storm_alarm;
     uint8_t  fused_alti_disabled;

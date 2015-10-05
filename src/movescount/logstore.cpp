@@ -493,8 +493,8 @@ void LogStore::XMLReader::readPersonalSettings()
         else if (xml.name() == "IsMale") {
             logEntry->personalSettings->is_male = xml.readElementText().toUInt();
         }
-        else if (xml.name() == "Length") {
-            logEntry->personalSettings->length = xml.readElementText().toUInt();
+        else if (xml.name() == "Height") {
+            logEntry->personalSettings->height = xml.readElementText().toUInt();
         }
         else if (xml.name() == "AltiBaroMode") {
             logEntry->personalSettings->alti_baro_mode = xml.readElementText().toUInt();
@@ -1437,7 +1437,7 @@ bool LogStore::XMLWriter::writePersonalSettings()
     xml.writeTextElement("RestHR", QString("%1").arg(personalSettings->rest_hr));
     xml.writeTextElement("FitnessLevel", QString("%1").arg(personalSettings->fitness_level));
     xml.writeTextElement("IsMale", QString("%1").arg(personalSettings->is_male));
-    xml.writeTextElement("Length", QString("%1").arg(personalSettings->length));
+    xml.writeTextElement("Height", QString("%1").arg(personalSettings->height));
     xml.writeTextElement("AltiBaroMode", QString("%1").arg(personalSettings->alti_baro_mode));
     xml.writeTextElement("StormAlarm", QString("%1").arg(personalSettings->storm_alarm));
     xml.writeTextElement("FusedAltiDisabled", QString("%1").arg(personalSettings->fused_alti_disabled));

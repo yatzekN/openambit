@@ -148,7 +148,7 @@ static int personal_settings_get(ambit_object_t *object, ambit_personal_settings
             break;
           case 0x1b:
           case 0x1e:
-            // settings->length = libambit_sbem0102_data_ptr(&reply_data_object)[0];
+            // settings->height = libambit_sbem0102_data_ptr(&reply_data_object)[0];
             //break;
           case 0x1c:
             //settings->backlight_brightness = libambit_sbem0102_data_ptr(&reply_data_object)[0];

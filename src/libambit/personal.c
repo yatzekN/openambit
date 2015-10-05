@@ -97,7 +97,7 @@ int libambit_personal_settings_parse(uint8_t *data, size_t datalen, ambit_person
     settings->rest_hr = read8inc(data, &offset);
     settings->fitness_level = read8inc(data, &offset);
     settings->is_male = read8inc(data, &offset);
-    settings->length = read8inc(data, &offset);
+    settings->height = read8inc(data, &offset);
 
     offset += 3;
 
